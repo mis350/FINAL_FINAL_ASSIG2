@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+</head>
+<body>
+  
+</head>
+<body>
+  
+<table>
+
+     <tr bgcolor="345678">
+      <th> <strong> Name </strong> </th>
+      <th> <strong> Response Time </th> </strong>
+     </tr>
+
+    {% for n in names %}
+    <tr align="center">
+       <td> {{ n.name }} </td>
+       <td> {{ n.response_time }} </td>
+    </tr>
+    {% endfor %}
+
+  </table>
+
+</body>
+</html>
+

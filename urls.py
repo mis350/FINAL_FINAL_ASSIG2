@@ -16,15 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
-from poll.views import polls_list, polls_list_u, poll_details, names_list, form_list
+from poll.views import polls_list, polls_list_u, poll_details, names_list,poll_poll
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('pollslist/', polls_list),
     path('pollslist2/', polls_list_u),
-    path('polldetails/<str:p_title>', poll_details), 
+    path('polldetails/', poll_details), 
     path('nameslist/', names_list),
-    path('form/', form_list),
-    
+    path('poll_poll/', poll_poll),
 ]

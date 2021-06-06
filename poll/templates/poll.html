@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  
+  <ol>
+    {% for p in list_polls %}
+      <li>
+        <a href="/polldetails/"> {{ p.title }} </a> /Active until: {{ p.active_until }} /Options: {{ options_list1 }} /Number of Responses: {{ responses_list1 }}
+      </li>
+    {% endfor %}
+  </ol>
+  
+  
+  
+
+  <ol>
+    {% for pu in list_polls_u %}
+      <li>
+      <a href="/polldetails/"> {{pu.title }} </a> /Active until: {{ pu.active_until }} /Options: {{ options_list2 }} /Number of response: {{ responses_list2 }}
+      </li>
+    {% endfor %}
+    
+    
+  </ol>
+
+
+
+  <table>
+     <tr bgcolor="blue" style="color:white;">
+      <th><strong> Poll Title </strong> </th>
+      <th><strong> Question </strong></th>
+      <th><strong> Active until </strong></th>
+      <th><strong> Status </strong> </th>
+      </tr>
+      <tr>
+    {% for pd in details %}
+      <tr>
+      <td style="border:2px solid blue;">{{ pd.title }}</td>
+      <td style="border:2px solid blue;">{{ pd.question }}</td> 
+      <td style="border:2px solid blue;">{{ pd.active_until }}</td>
+      <td style="border:2px solid blue;">{{ pd.status }}</td>
+      </tr>
+    {% endfor %}
+    </tr>
+    
+    
+    
+    
+    
+    
+    <tr>
+      <td> Total Responses: </td>
+      <td> {{ number_responses }} </td>
+    </tr>
+  </table>
+  
+
+    
+
+</body>
+</html>
